@@ -1,0 +1,9 @@
+DB_HOST = "localhost" 
+DB_PORT = "5432"
+DB_USERNAME = "postgres"
+DB_PASSWORD = "mohan"
+DB_DATABASE_NAME = "python_learning"
+
+TOKEN_SECRET_KEY = "mohanlearningfastapi779912345"
+TOKEN_ALGORITHM = "HS256"
+TOKEN_EXPIRE_TIME_SECONDS = 3600

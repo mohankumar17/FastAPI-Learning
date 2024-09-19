@@ -1,0 +1,26 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
+from . import config
+
+host = config.DB_HOST
+port = config.DB_PORT
+username = config.DB_USERNAME
+password = config.DB_PASSWORD
+database_name = config.DB_DATABASE_NAME
+
+# Create an engine connected to the Postgres database
+SQLALCHEMY_DATABASE_URL = f"postgresql+psycopg2://{username}:{password}@{host}:{port}/{database_name}"
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
+
+# Create a configured "Session" class
+Session = sessionmaker(bind=engine)
+
+# Base class for our classes definitions
+Base = declarative_base()
+
+def get_db():
+    db = Session()
+    try:
+        yield db
+    finally:
+        db.close()

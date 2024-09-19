@@ -1,0 +1,20 @@
+FastAPI Framework:
+
+1. FastAPI is a high performace Python Framework for Web Development. It is used to develop APIs (RESTfull applications).
+2. It is intuitive and easy to learn. The APIs can also be developed faster.
+3. It offers features like:
+    a. Schema Validation (using pydantic)
+    b. Async
+    c. Automatic REST API documentation etc. [Eg. http://localhost:8000/docs]
+4. It uses uvicorn webserver for serving the requests. 
+    uvicorn uses ASGI (Asynchronous Server Gateway Interface) to run the asynchronous code in python.
+
+============================
+
+To run the application, use the following command:
+> uvicorn <package_name>.<app_name>:app
+
+Eg. uvicorn pack.main:app
+
+For debugging, use:
+> uvicorn <app_name>:app -- reload
