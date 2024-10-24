@@ -1,0 +1,8 @@
+# Alembic Commands
+
+1. alembic --help
+2. alembic revision -m "message" (Create new revision file)
+3. alembic upgrade "revision_id"
+4. alembic current (Return head/current revision id)
+5. alembic downgrade "revision_id"
+6. alembic revision --autogenerate -m "message" (Generate code automatically in revision file to match the SQLAlchemy Model with Database)
